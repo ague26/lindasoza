@@ -1,0 +1,280 @@
+<!DOCTYPE HTML>
+
+<html>
+	
+	<head>
+		<meta name="viewport" content="initial-scale=1">
+		<meta name="viewport" content="width=device-width">
+		<script
+		  src="https://code.jquery.com/jquery-3.2.1.js"
+		  integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE="
+		  crossorigin="anonymous">
+		</script>
+
+		<script> 
+
+			$(document).ready(function() {
+   				$("#top").animate({left: "+=100%"}, 1800);
+			});
+			$(document).ready(function() {
+	            $('#spanishlinker').click(function() {
+	            	$('#spanish').show();
+	            	$('#english').hide();
+	            	$('#french').hide();
+				});
+			});
+			$(document).ready(function() {
+	            $('#frenchlinker').click(function() {
+	            	$('#french').show();
+	            	$('#english').hide();
+	            	$('#spanish').hide();
+				});
+			});
+			$(document).ready(function() {
+	            $('#englishlinker').click(function() {
+	            	$('#english').show();
+	            	$('#french').hide();
+	            	$('#spanish').hide();
+				});
+			});
+		</script> 
+
+		<style>
+			*{
+				margin:0;
+				padding:0;
+			}
+			/*body{
+				height:100%;
+				width:1280px;
+			}*/
+			#intro{
+				background-image: url('statue.jpg');	
+				background-size: 100% 100%;		
+				height:700px;
+				width:1280px;
+			}
+			#top{
+				width: 100%;
+			    position: absolute;
+			    top: 0;
+			    margin-left: -100%;
+			    margin-top: 200px;
+			}
+			#title{
+				width:50%;
+				text-align: center;
+			}
+			#title h1{
+				font-size:90px;
+				color:white;
+			}
+			#title p {
+				color: #e7757e;
+				font-size: 20px;
+				font-weight: bold;
+				text-align: center;
+			}
+			#top img{
+				height: 100px;
+				width:100px;
+				border-radius:50px; 
+			}
+			#middle{
+				background-image: url('bg1.jpeg');	
+				background-size: 100% 100%;	
+				height:700px;
+				width:1280px;
+				position: absolute;
+			}
+			#box{
+				height:inherit;
+				width:inherit;
+			}
+			#box #paragraph{
+				height:500px;
+				width: 900px;
+				float: right;
+				margin-top: 110px;			
+			}
+			#box ul{
+				width:70%;
+				margin:auto;
+				margin-bottom: 50px;
+			}
+			#box li{
+				display: inline-block;
+				color: white;
+				border-right: solid;
+				border-width: 2px;
+				border-color: beige;
+				font-size: 36px;
+				padding-right: 10px;
+				}
+			#box #spanishlinker:hover{
+				background-color:#494942;
+			}
+
+			#box #frenchlinker:hover{
+				background-color:#494942;
+			}
+			#box #englishlinker:hover{
+				background-color:#494942;
+			}
+			#box p{
+				height:inherit;
+				width:70%;
+				margin:auto;
+				color:white;
+				word-wrap:break-word;
+			}
+			#box #spanish{
+				display: none;
+			}
+			#box #french{
+				display: none;
+			}
+			#box #copyright{
+				width:inherit;
+				word-wrap:break-word;
+				bottom: 0;
+				position: absolute;
+			}
+			#box #copyright p{
+				color: beige;
+				width:28%;
+				margin:auto;
+			}
+			#box #copyright a{
+				color:beige;
+			}
+
+			@media screen and ( max-width: 768px ){
+				body{
+					width: 100%;
+					height: 100vh;
+				}
+				#intro{
+					width: 100%;
+					height: 100%;
+					background-size: contain;
+					background-repeat: space;
+				}
+				#top{
+					height: 100%;
+					margin-top: unset;
+/*					background-color: white;
+*/				}
+				#top img {
+					height:45%;
+					width:28%;
+					border-radius: 50%;
+				}
+				#title{
+					height: 34%;
+					width:100%;
+					margin-top: 53%;
+
+				}
+				#title h1{
+					font-size: 228%;
+					color:black;
+				}
+				#middle{
+					width: 100%;
+					height: auto;
+					background-size: cover;
+					background-image: url('law_book.jpeg');
+				}
+				#box {
+					height:900px;
+					width:96%;
+					margin: auto;
+					/*background-color: white;*/
+				}
+				#box #paragraph{
+/*					background-color: white;
+*/					height:80%;
+					width:100%;
+					margin-top: 24%;
+					float:unset;
+				}
+				#box ul{
+					width: 84%;
+					margin-bottom:4%;
+				}
+				#box li{
+					color: white;
+					font-size: 28px;
+				}
+				#box #paragraph p{
+				height:88%;
+				width:94%;
+				color:black;
+				font-size: 18px;
+				}
+				#box #copyright{
+					height: 5%;
+					position: unset;
+					margin-top: 120px;
+
+				}
+				#box #copyright p{
+					width:98%;
+					color: black;
+					font-size: 90%;
+				}
+
+			}
+			
+		</style>
+	</head>
+
+	<body>
+		<div id = "intro">
+
+			<div id = "top">
+				<div id="title">
+					<img src="linda.jpeg">
+					<h1>Linda Soza </h1> <p> IMMIGRATION PARALEGAL </p>
+				</div>	
+			</div>
+		</div>
+
+		<div id = "middle">
+
+			<div id = "box">
+
+				<div id = "paragraph">
+
+					<ul>
+						<li id ="spanishlinker">Spanish  
+						</li>
+						<li id = "frenchlinker">French 
+						</li>
+						<li id = "englishlinker">English 
+						</li>
+					</ul>
+
+					<p id = "english">wordswordswordswordswordswordswordswordswordswordswordswordswordswordswordswordswordswordswordswordswordswordswordswordswordswordswordswordswordswordswordswordswordswordswordswordswordswordswordswordswordswordswordswordswordswordswordswordswordswordswordswordswordswordswordswordswordswordswordswordswordswordswordswordswordswordswordswordswordswordswordswordswordswordswordswordswordswordswordswordswordswordswordswordswordswordswordswordswordswordswordswordswordswordswordswordswordswordswordswordswordswordswordswordswordswordswordswordswordswordswordswordswordswordswordswordswordswordswordswordswordswordswordswordswordswordswordswordswordswordswordswordswordswordswordswordswordswordswordswordswordswordswordswordswordswordswordswordswordswordswordswordswordswordswordswordswordswordswordswordswordswordswordswordswordswordswordswordswords</p>
+
+					<p id = "spanish">palabraspalabraspalabraspalabraspalabraspalabraspalabraspalabraspalabraspalabraspalabraspalabraspalabraspalabraspalabraspalabraspalabraspalabraspalabraspalabraspalabraspalabraspalabraspalabraspalabraspalabraspalabraspalabraspalabraspalabraspalabraspalabraspalabraspalabraspalabraspalabraspalabraspalabraspalabraspalabraspalabraspalabraspalabraspalabraspalabraspalabraspalabraspalabraspalabraspalabraspalabraspalabraspalabraspalabraspalabraspalabraspalabraspalabraspalabraspalabraspalabraspalabraspalabraspalabraspalabraspalabraspalabraspalabraspalabraspalabraspalabraspalabraspalabraspalabraspalabraspalabraspalabraspalabraspalabraspalabraspalabraspalabraspalabraspalabraspalabraspalabraspalabraspalabraspalabraspalabraspalabraspalabraspalabraspalabraspalabraspalabraspalabraspalabraspalabraspalabraspalabraspalabraspalabraspalabraspalabras</p>
+
+					<p id = "french">motsmotsmotsmotsmotsmotsmotsmotsmotsmotsmotsmotsmotsmotsmotsmotsmotsmotsmotsmotsmotsmotsmotsmotsmotsmotsmotsmotsmotsmotsmotsmotsmotsmotsmotsmotsmotsmotsmotsmotsmotsmotsmotsmotsmotsmotsmotsmotsmotsmotsmotsmotsmotsmotsmotsmotsmotsmotsmotsmotsmotsmotsmotsmotsmotsmotsmotsmotsmotsmotsmotsmotsmotsmotsmotsmotsmotsmotsmotsmotsmotsmotsmotsmotsmotsmotsmotsmotsmotsmotsmotsmotsmotsmotsmotsmotsmotsmotsmotsmotsmotsmotsmotsmotsmotsmotsmotsmotsmotsmotsmotsmotsmotsmotsmotsmotsmotsmotsmotsmotsmotsmotsmotsmotsmotsmotsmotsmotsmotsmotsmotsmotsmotsmotsmotsmotsmotsmotsmotsmotsmotsmotsmotsmotsmotsmotsmotsmotsmotsmotsmotsmotsmotsmotsmotsmotsmotsmotsmotsmotsmotsmotsmotsmotsmotsmotsmotsmotsmotsmotsmotsmotsmotsmotsmotsmotsmotsmotsmotsmotsmotsmotsmotsmotsmotsmotsmotsmotsmotsmotsmotsmotsmotsmotsmotsmotsmotsmotsmotsmotsmotsmotsmotsmotsmotsmotsmotsmotsmotsmots</p>
+
+				</div>
+
+				<div id = "copyright">
+					<p> &copy 2017 <a href = "http://www.alexguevara.me"> Alexander Guevara</a> , unless otherwise noted.</p>
+
+				</div>
+
+			</div>
+
+		</div>	
+			
+		
+
+	</body>
+
+</html>
