@@ -10,271 +10,123 @@
 		  integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE="
 		  crossorigin="anonymous">
 		</script>
-
-		<script> 
-
-			$(document).ready(function() {
-   				$("#top").animate({left: "+=100%"}, 1800);
-			});
-			$(document).ready(function() {
-	            $('#spanishlinker').click(function() {
-	            	$('#spanish').show();
-	            	$('#english').hide();
-	            	$('#french').hide();
-				});
-			});
-			$(document).ready(function() {
-	            $('#frenchlinker').click(function() {
-	            	$('#french').show();
-	            	$('#english').hide();
-	            	$('#spanish').hide();
-				});
-			});
-			$(document).ready(function() {
-	            $('#englishlinker').click(function() {
-	            	$('#english').show();
-	            	$('#french').hide();
-	            	$('#spanish').hide();
-				});
-			});
-		</script> 
-
-		<style>
-			*{
-				margin:0;
-				padding:0;
-			}
-			/*body{
-				height:100%;
-				width:1280px;
-			}*/
-			#intro{
-				background-image: url('statue.jpg');	
-				background-size: 100% 100%;		
-				height:700px;
-				width:1280px;
-			}
-			#top{
-				width: 100%;
-			    position: absolute;
-			    top: 0;
-			    margin-left: -100%;
-			    margin-top: 200px;
-			}
-			#title{
-				width:50%;
-				text-align: center;
-			}
-			#title h1{
-				font-size:90px;
-				color:white;
-			}
-			#title p {
-				color: #e7757e;
-				font-size: 20px;
-				font-weight: bold;
-				text-align: center;
-			}
-			#top img{
-				height: 100px;
-				width:100px;
-				border-radius:50px; 
-			}
-			#middle{
-				background-image: url('bg1.jpeg');	
-				background-size: 100% 100%;	
-				height:700px;
-				width:1280px;
-				position: absolute;
-			}
-			#box{
-				height:inherit;
-				width:inherit;
-			}
-			#box #paragraph{
-				height:500px;
-				width: 900px;
-				float: right;
-				margin-top: 110px;			
-			}
-			#box ul{
-				width:70%;
-				margin:auto;
-				margin-bottom: 50px;
-			}
-			#box li{
-				display: inline-block;
-				color: white;
-				border-right: solid;
-				border-width: 2px;
-				border-color: beige;
-				font-size: 36px;
-				padding-right: 10px;
-				}
-			#box #spanishlinker:hover{
-				background-color:#494942;
-			}
-
-			#box #frenchlinker:hover{
-				background-color:#494942;
-			}
-			#box #englishlinker:hover{
-				background-color:#494942;
-			}
-			#box p{
-				height:inherit;
-				width:70%;
-				margin:auto;
-				color:white;
-				word-wrap:break-word;
-			}
-			#box #spanish{
-				display: none;
-			}
-			#box #french{
-				display: none;
-			}
-			#box #copyright{
-				width:inherit;
-				word-wrap:break-word;
-				bottom: 0;
-				position: absolute;
-			}
-			#box #copyright p{
-				color: beige;
-				width:28%;
-				margin:auto;
-			}
-			#box #copyright a{
-				color:beige;
-			}
-
-			@media screen and ( max-width: 768px ){
-				body{
-					width: 100%;
-					height: 100vh;
-				}
-				#intro{
-					width: 100%;
-					height: 100%;
-					background-size: contain;
-					background-repeat: space;
-				}
-				#top{
-					height: 100%;
-					margin-top: unset;
-/*					background-color: white;
-*/				}
-				#top img {
-					height:45%;
-					width:28%;
-					border-radius: 50%;
-				}
-				#title{
-					height: 34%;
-					width:100%;
-					margin-top: 53%;
-
-				}
-				#title h1{
-					font-size: 228%;
-					color:black;
-				}
-				#middle{
-					width: 100%;
-					height: auto;
-					background-size: cover;
-					background-image: url('law_book.jpeg');
-				}
-				#box {
-					height:900px;
-					width:96%;
-					margin: auto;
-					/*background-color: white;*/
-				}
-				#box #paragraph{
-/*					background-color: white;
-*/					height:80%;
-					width:100%;
-					margin-top: 24%;
-					float:unset;
-				}
-				#box ul{
-					width: 84%;
-					margin-bottom:4%;
-				}
-				#box li{
-					color: white;
-					font-size: 28px;
-				}
-				#box #paragraph p{
-				height:88%;
-				width:94%;
-				color:black;
-				font-size: 18px;
-				}
-				#box #copyright{
-					height: 5%;
-					position: unset;
-					margin-top: 120px;
-
-				}
-				#box #copyright p{
-					width:98%;
-					color: black;
-					font-size: 90%;
-				}
-
-			}
-			
-		</style>
+		<link rel="stylesheet" href="index.css">
+		<link href="https://fonts.googleapis.com/css?family=Rubik:400,500" rel="stylesheet">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
 	</head>
 
 	<body>
-		<div id = "intro">
-
-			<div id = "top">
-				<div id="title">
-					<img src="linda.jpeg">
-					<h1>Linda Soza </h1> <p> IMMIGRATION PARALEGAL </p>
-				</div>	
+		<div class="container-fluid" id = "intro">
+			<div class="container float-right" id="nav">
+				<ul class="row">
+					<li class="col-6"><a href="#paragraph"><h6>Services / Servicios</h6></a></li>
+					<li class="col-6"><a href="#contact"><h6>Contact Linda Soza</h6></a></li>
+				</ul>
 			</div>
+	
+			<div class="container" id = "top">
+				
+					<img class="img-thumbnail img-responsive max-width: 100%; height: auto;" alt="Linda Soza profile" src="linda.jpeg">
+					<h1 class="text-white display-2">Linda Soza </h1> 
+					<h3 class="text-danger"> IMMIGRATION PARALEGAL </h3>
+				
+			</div>
+			
+			<div class="arrow"></div>
+			
 		</div>
 
-		<div id = "middle">
+		<div class="container-fluid" id = "middle">
 
-			<div id = "box">
-
-				<div id = "paragraph">
-
-					<ul>
-						<li id ="spanishlinker">Spanish  
-						</li>
-						<li id = "frenchlinker">French 
-						</li>
-						<li id = "englishlinker">English 
-						</li>
-					</ul>
-
-					<p id = "english">wordswordswordswordswordswordswordswordswordswordswordswordswordswordswordswordswordswordswordswordswordswordswordswordswordswordswordswordswordswordswordswordswordswordswordswordswordswordswordswordswordswordswordswordswordswordswordswordswordswordswordswordswordswordswordswordswordswordswordswordswordswordswordswordswordswordswordswordswordswordswordswordswordswordswordswordswordswordswordswordswordswordswordswordswordswordswordswordswordswordswordswordswordswordswordswordswordswordswordswordswordswordswordswordswordswordswordswordswordswordswordswordswordswordswordswordswordswordswordswordswordswordswordswordswordswordswordswordswordswordswordswordswordswordswordswordswordswordswordswordswordswordswordswordswordswordswordswordswordswordswordswordswordswordswordswordswordswordswordswordswordswordswordswordswordswordswordswordswords</p>
-
-					<p id = "spanish">palabraspalabraspalabraspalabraspalabraspalabraspalabraspalabraspalabraspalabraspalabraspalabraspalabraspalabraspalabraspalabraspalabraspalabraspalabraspalabraspalabraspalabraspalabraspalabraspalabraspalabraspalabraspalabraspalabraspalabraspalabraspalabraspalabraspalabraspalabraspalabraspalabraspalabraspalabraspalabraspalabraspalabraspalabraspalabraspalabraspalabraspalabraspalabraspalabraspalabraspalabraspalabraspalabraspalabraspalabraspalabraspalabraspalabraspalabraspalabraspalabraspalabraspalabraspalabraspalabraspalabraspalabraspalabraspalabraspalabraspalabraspalabraspalabraspalabraspalabraspalabraspalabraspalabraspalabraspalabraspalabraspalabraspalabraspalabraspalabraspalabraspalabraspalabraspalabraspalabraspalabraspalabraspalabraspalabraspalabraspalabraspalabraspalabraspalabraspalabraspalabraspalabraspalabraspalabraspalabras</p>
-
-					<p id = "french">motsmotsmotsmotsmotsmotsmotsmotsmotsmotsmotsmotsmotsmotsmotsmotsmotsmotsmotsmotsmotsmotsmotsmotsmotsmotsmotsmotsmotsmotsmotsmotsmotsmotsmotsmotsmotsmotsmotsmotsmotsmotsmotsmotsmotsmotsmotsmotsmotsmotsmotsmotsmotsmotsmotsmotsmotsmotsmotsmotsmotsmotsmotsmotsmotsmotsmotsmotsmotsmotsmotsmotsmotsmotsmotsmotsmotsmotsmotsmotsmotsmotsmotsmotsmotsmotsmotsmotsmotsmotsmotsmotsmotsmotsmotsmotsmotsmotsmotsmotsmotsmotsmotsmotsmotsmotsmotsmotsmotsmotsmotsmotsmotsmotsmotsmotsmotsmotsmotsmotsmotsmotsmotsmotsmotsmotsmotsmotsmotsmotsmotsmotsmotsmotsmotsmotsmotsmotsmotsmotsmotsmotsmotsmotsmotsmotsmotsmotsmotsmotsmotsmotsmotsmotsmotsmotsmotsmotsmotsmotsmotsmotsmotsmotsmotsmotsmotsmotsmotsmotsmotsmotsmotsmotsmotsmotsmotsmotsmotsmotsmotsmotsmotsmotsmotsmotsmotsmotsmotsmotsmotsmotsmotsmotsmotsmotsmotsmotsmotsmotsmotsmotsmotsmotsmotsmotsmotsmotsmotsmots</p>
-
+			<div class="container w-100" id="box">
+				<ul class="row float-right mt-4 w-75">
+					<li class="col-6" id = "englishlinker"><h1>English</h1>
+					</li>
+					<li class="col-6" id ="spanishlinker"><h1>Espanol</h1>  
+					</li>
+				</ul>
+				
+				<div class="row float-right pb-4 " id="paragraph">
+					<p id="english">Linda Soza is a paralegal that has been working in the immigration field for several years. Her experience allows her to assist and prepare documents for clients seeking to process cases related to family based petitions, permanent residency, employment based petitions, and much more. Contact her today for a free quote!
+					</p>
+					<p id ="spanish">La paralegal Linda Soza lleva varios anos trabajado en la aria inmigratoria. Su experiencia le permite asistir y preparar documentos para clientes que buscan ayuda en procesar casos relacionados a peticiones familiares, de residencia, peticiones basadas por empleo, y mucho mas. Contacte la hoy para una cotizacion gratis!
+					</p>
 				</div>
-
-				<div id = "copyright">
-					<p> &copy 2017 <a href = "http://www.alexguevara.me"> Alexander Guevara</a> , unless otherwise noted.</p>
-
+				
+				<div class="row" id="paragraphDos">
+					<div class="col-md-7" id="skills">
+						<div id="englishList">
+							<h2>Services Available</h2>
+							<ul class="row">
+								<div class="col-6">
+									<li>Family Based petitions</li>
+									<li>Visas</li>
+									<li>Employment Based Petitions and Applications</li>	
+									<li>Affirmative Asylum Applications</li>
+									<li>Special Juvenile Immigrant Visa Applications</li>
+									<li>Provisional Unlawful Presence Waiver</li>
+								</div>
+								
+								<div class="col-6">
+								<li>Change of Address with Immigration</li>
+								<li>Extension or Change of Non-Immigrant Visa Status</li>
+								<li>Application for Waiver of Grounds of Inadmissibility</li>
+								<li>DACA</li>
+								<li>TPS</li>
+								<li>And much more</li>
+								</div>
+							</ul>
+						</div>
+						
+						<div id="spanishList">
+							<h2>Servicios Disponible</h2>
+							<ul class="row">
+								<div class="col-6">
+									<li>Peticiones Familiares</li>
+									<li>Visas</li>
+									<li>Peticiones y Aplicaciones Basada por Empleo</li>	
+									<li>Aplicaciones de Asilo Politico Afirmativo</li>
+									<li>Aplicaciones Para La Visa Juvenil</li>
+									<li>Perdon Provisional</li>
+								</div>	
+								<div class="col-6">
+									<li>Cambio De Direccion Con Inmigración</li>
+									<li>Solicitud de Extension o Cambio De Estatus De No Inmigrante</li>
+									<li>Solicitud De Exencion De Causal De Inadmisibilidad</li>
+									<li>DACA</li>
+									<li>TPS</li>
+									<li>Y mucho Mas!</li>
+								</div>
+							</ul>
+						</div>
+					</div>
+					
+					<div class="col-md-5" id="contact">
+						<h2>Contact</h2>
+						<form action="mailto:alexgue26@hotmail.com " 
+						method="post" enctype="text/plain" target="_top">
+							<div class="form-group">
+								<input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Name / Nombre">
+								<input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Email / Correo">
+								<input type="tel" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Phone Number / Telefono">
+								<textarea class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="Description / Descripcion"></textarea>
+								<button type="submit" class="btn btn-primary">Submit</button>
+							</div>
+						</form>
+					</div>
+					
 				</div>
 
 			</div>
+				<div class="container w-75" id = "copyright">
+					<p> &copy 2017 <a href = "http://www.alexguevara.me"> Alexander Guevara</a> , unless otherwise noted.</p>
+				</div>
 
-		</div>	
-			
+		</div>
 		
 
+		<script type="text/javascript" src="index.js"></script>
+	
 	</body>
 
 </html>

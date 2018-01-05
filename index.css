@@ -1,0 +1,262 @@
+	*{
+		margin:0;
+		padding:0;
+	}
+	#intro{
+		background-image: url('statue.jpg');	
+		background-size: 100% 100%;		
+		height:100vh;
+		width:100vw;
+	}
+	#top{
+	    position: absolute;
+	    margin-left: -97%;
+	    margin-top: 100px;
+	}
+	#nav{
+		width:30%;
+	}
+	#nav li{
+		margin-top: 20px;
+		display: inline-block;
+	}
+	#nav li a:link, a:visited{
+		text-decoration: none;
+		color:white;
+
+	}
+	#title{
+		width:50%;
+		text-align: center;
+	}
+	#title h1{
+		font-size:90px;
+		color:white;
+	}
+	#title p {
+		color: #e7757e;
+		font-size: 20px;
+		font-weight: bold;
+		text-align: center;
+	}
+	#top img{
+		height: 160px;
+		border-radius:50px; 
+	}
+	#top h1{
+		font-size: 2.5rem;
+	}
+	.arrow,
+	.arrow:before{
+	  position: absolute;
+	  left: 50%;
+	}
+	.arrow{
+	  width: 40px;
+	  height: 40px;
+	  top: 90%;
+	  margin: -20px 0 0 -20px;
+	  transform: rotate(45deg);
+	  border-left: none;
+	  border-top: none;
+	  border-right: 2px white solid;
+	  border-bottom: 2px white solid;
+	}
+	  
+	.arrow:before{
+	  content: '';
+	  width: 20px;
+	  height: 20px;
+	  top: 50%;
+	  margin: -10px 0 0 -10px;
+	  border-left: none;
+	  border-top: none;
+	  border-right: 1px white solid;
+	  border-bottom: 1px white solid;
+	  animation-duration: 2s;
+	  animation-iteration-count: infinite;
+	  animation-name: arrow;
+	}  
+	@keyframes arrow{
+	  0%
+	    opacity: 1;
+	 100%
+	    opacity: 0;
+	    transform: translate(-10px, -10px);
+ 	}
+	#middle{
+		background-image: url('bg1.jpeg');	
+		background-size: 100% 86%;	
+		height:120vh;
+		width:100vw;
+		position: absolute;
+	}
+	#paragraph{
+		width: 70%;
+		font-family: 'Rubik', sans-serif;		
+	}
+	#paragraph ul{
+		width:70%;
+		margin:auto;
+		margin-bottom: 30px;
+		font-style: italic;
+	}
+
+	#spanishlinker{
+		display: inline-block;
+		color: white;
+		font-size: 36px;
+		text-align: center;
+	}
+	#englishlinker{
+		border-right: solid;
+		display: inline-block;
+		color: white;
+		border-width: 2px;
+		border-color: beige;
+		font-size: 36px;
+		text-align: center;
+	}
+	#spanishlinker:hover{
+		background-color:rgba(73, 73, 66,0.4);
+	}
+
+	#englishlinker:hover{
+		background-color:rgba(73, 73, 66,0.4);
+	}
+	#paragraph p{
+		margin:auto;
+		color:white;
+		word-wrap:break-word;
+		font-size: 22px;
+		line-height: 40px;
+	}
+	#spanish{
+		display: none;
+	}
+	#paragraphDos{
+		height:40%;
+		width: 70%;
+		clear:right;
+		float: right;
+	}
+	#skills{
+		float: left;
+		color: white;
+		font-size: 15px;
+	}
+	#skills h1{
+		text-align: center;
+	}
+	#skills ul{
+		margin:auto;
+		line-height: 23px;
+	}
+	#spanishList{
+		display: none;
+	}
+	#contact{
+		color: white;
+	}
+	#contact form{
+		height: inherit;
+	}
+	#contact input{
+		margin-bottom: 1em;
+	}
+	#contact input[type=number]::-webkit-inner-spin-button, 
+	input[type=number]::-webkit-outer-spin-button { 
+  		-webkit-appearance: none; 
+  		margin: 0; 
+	}
+	#contact textarea{
+		height:50%;
+		margin-bottom: 1em;
+	}
+	#copyright{
+		word-wrap:break-word;
+		bottom: 0;
+		position: absolute;
+		text-align: center;
+	}
+	#copyright p{
+		color: beige;
+		margin:auto;
+	}
+	#copyright a{
+		color:beige;
+	}
+	#box{
+		height: inherit;
+	}
+
+
+	@media screen and ( max-device-width: 700px ){
+		#nav{
+			width: 57%;
+		}
+		#nav h6{
+			font-size: .8rem;
+		}
+		#top{
+			margin-left:-104%;
+			text-align: center;
+		}
+		#middle{
+			height: 190vh;
+		}
+		#box h1{
+			font-size: 1.5rem;
+		}
+		#paragraph{
+			width:75%;
+		}
+		#paragraph p{
+			font-size: 12px;
+		}
+		#copyright p{
+			font-size: .7rem;
+		}
+		#paragraphDos{
+			width:77%;
+		}
+		#skills{
+			padding-left: unset;
+			padding-right: unset;
+		}
+		#englishList h2{
+			font-size: 1rem;
+		}
+		#englishList ul{
+			font-size: 10px;
+		}
+		#englishList ul div{
+			padding-right: unset;
+		}
+		#spanishList h2{
+			font-size: 1rem;
+		}
+		#spanishList ul{
+			font-size: 10px;
+		}
+		#spanishList ul div{
+			padding-right: unset;
+		}
+		#contact h2{
+			font-size: 1rem;
+		}
+		#contact form div .form-control{
+			font-size: .7rem;
+		}
+	}
+	@media screen and (max-device-height:400px) {
+	  	#top{
+	  		text-align: unset;
+	  		margin-top:38px; 
+	  		margin-left: -103%;
+	  	}
+	  	#middle{
+	  		height:240vh;
+	  	}
+	}
+			
